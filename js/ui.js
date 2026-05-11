@@ -75,7 +75,7 @@ export function renderPhotos(photos, append = false) {
     const html = photos.map(photo => `
         <div class="photo-item" data-id="${photo.id}">
             <img
-                src="${photo.src.medium}"
+                src="${photo.src.large}"
                 alt="${photo.alt || 'Zdjęcie'}"
                 loading="lazy"
             >
@@ -87,7 +87,7 @@ export function renderPhotos(photos, append = false) {
                     <button class="photo-action-btn" data-action="view" data-id="${photo.id}">
                         🔍 Powiększ
                     </button>
-                    
+                    <a
                         class="photo-action-btn"
                         href="${photo.src.original}"
                         download
